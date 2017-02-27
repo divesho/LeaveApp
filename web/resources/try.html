@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="zoom" style="zoom: 2;">
+            <div>Normal</div>
+            <img src="http://s18.postimg.org/jcrc7se9x/Chrysanthemum.jpg" />
+        </div>
+        <button onclick="incr()">+</button><button onclick="decr()">-</button>
+        <script>
+        var val = 0;
+        function incr(){
+            val++;
+            if(val > 10){
+                val = 10;
+            }
+            document.getElementById("zoom").style.zoom=val;
+        }
+        function decr(){
+            val--;
+            if(val < 0){
+                val = 0;
+            }
+            document.getElementById("zoom").style.zoom=val;
+        }
+        </script>
+    </body>
+</html>
